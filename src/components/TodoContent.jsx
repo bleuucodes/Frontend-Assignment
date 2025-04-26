@@ -18,7 +18,7 @@ const TodoContent = () => {
   };
 
   return (
-    <div className="flex flex-col flex-1 min-h-screen">
+    <div className="flex flex-col flex-1">
       {/* TodoContent header */}
       <div className="flex justify-between items-center border-b-2 border-[#80819158]">
         <h2 className="text-lg p-4">Section</h2>
