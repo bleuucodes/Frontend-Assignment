@@ -9,7 +9,7 @@ import Mode from "../assets/mode.png";
 
 const Sidebar = () => {
   return (
-    <div className="border-r-2 border-[#80819158] flex flex-col justify-between">
+    <div className="border-r-2  border-[#80819158] flex flex-col justify-between">
       <div className="m-7 ">
         <div className="flex items-center">
           <img className="w-8 h-8 " src={UserIcon} alt="user icon" />
