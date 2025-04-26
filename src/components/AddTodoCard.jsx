@@ -3,6 +3,7 @@ import Add from "../assets/add.png";
 import Tick from "../assets/tick.png";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../utils/todoSlice";
+import Buy from "../assets/buy.png"
 
 const AddTodoCard = ({ listIndex }) => {
   const dispatch = useDispatch();
@@ -31,8 +32,9 @@ const AddTodoCard = ({ listIndex }) => {
     <div className="pt-3 px-2 bg-[#242731] text-[#808191] w-56 rounded-xl  my-2 ">
 
       <div className="flex justify-between ">
+        <img src={Buy} alt="buy icon" className="w-6 h-6"/>
         <input
-          className="text-lg px-2 bg-[#242731] w-36 font-semibold"
+          className="text-lg  bg-[#242731] w-36 font-semibold"
           type="text"
           value={title}
           placeholder="Add Todo"

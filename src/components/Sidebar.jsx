@@ -3,6 +3,9 @@ import UserIcon from "../assets/user.png";
 import Arrow from "../assets/arrow.png";
 import Category from "../assets/category.png";
 import Share from "../assets/share.png";
+import Section1 from "../assets/section1.png";
+import Section2 from "../assets/section2.png";
+import Mode from "../assets/mode.png";
 
 const Sidebar = () => {
   return (
@@ -15,19 +18,19 @@ const Sidebar = () => {
         </div>
 
         <div className="text-[#808191] font-medium text-md">
-          <ul >
+          <ul>
             <li className="flex items-center my-6 ">
               <img src={Category} className="mr-6 h-5 w-5" />
               Home
             </li>
 
             <li className="flex items-center my-6">
-              <img src={Category} className="mr-6 h-5 w-5" />
+              <img src={Section1} className="mr-6 h-5 w-5" />
               Section 1
             </li>
 
             <li className="flex items-center my-6">
-              <img src={Category} className="mr-6 h-5 w-5" />
+              <img src={Section2} className="mr-6 h-5 w-5" />
               Section 2
             </li>
 
@@ -44,15 +47,18 @@ const Sidebar = () => {
         </div>
       </div>
 
+      <div className="flex flex-col items-start">
+        <div className="flex text-sm m-7">
+          <button className="flex items-center bg-[#353945] px-2 rounded-xl mr-2">
+            <img className="w-6 h-6 mr-2 " src={UserIcon} alt="user icon" />
+            $0.90
+          </button>
+          <button className="flex items-center bg-[#A3E3FF] text-[#3772FF] font-semibold px-2 py-2 rounded-xl">
+            Buy $XYZ
+          </button>
+        </div>
 
-      <div className="flex text-sm m-7">
-        <button className="flex items-center bg-[#353945] px-2 rounded-xl mr-2">
-          <img className="w-5 h-5 mr-2 " src={UserIcon} alt="user icon" />
-          $0.90
-        </button>
-        <button className="flex items-center bg-[#A3E3FF] text-[#3772FF] font-semibold px-2 py-2 rounded-xl">
-          Buy $XYZ
-        </button>
+        <img className="w-24 h-8 ml-8" src={Mode} alt="modes icon" />
       </div>
     </div>
   );
