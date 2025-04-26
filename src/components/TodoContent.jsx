@@ -18,7 +18,7 @@ const TodoContent = () => {
   };
 
   return (
-    <div className="flex flex-col flex-1 ">
+    <div className="flex flex-col flex-1 overflow-hidden">
       {/* TodoContent header */}
       <div className="flex justify-between items-center border-b-2 border-[#80819158]">
         <h2 className="text-lg p-4">Section</h2>
@@ -32,26 +32,29 @@ const TodoContent = () => {
         </div>
       </div>
 
-      <div className="flex flex-1 gap-4 overflow-hidden">
+      <div className="flex flex-1 overflow-x-auto">
         {/* TodoContent Lists */}
-        <div className="flex  gap-4 p-4 flex-1 min-w-[940px]">
+        <div className="flex  gap-4 px-4 min-w-fit flex-1">
           {/* List Names */}
+
           {lists.map((list, index) => (
+            <div className="mt-4">
             <TodoList key={index} list={list} index={index} />
+            </div>
           ))}
 
           {/* Add List Names Handler */}
-          <div className="flex items-center justify-between h-[52px] px-3 mr-4 rounded-xl cursor-pointer bg-[#242731] min-w-56">
+          <div className="flex mt-4 items-center justify-between h-[52px] px-3 mr-4 rounded-xl cursor-pointer bg-[#242731] min-w-56">
             <p>Add Todo-List</p>
             <button onClick={handleAddList}>
               <img className="w-5 h-5 m-1" alt="add icon" src={Add} />
             </button>
           </div>
-        </div>
 
-        {/* Edit Section */}
-        <div className="flex min-w-[220px]">
-          <EditBar />
+          {/* Edit Section */}
+          <div className="flex min-w-[220px] ml-auto">
+            <EditBar />
+          </div>
         </div>
       </div>
     </div>
