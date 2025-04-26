@@ -5,18 +5,15 @@ import Header from "./components/Header";
 import TodoContent from "./components/TodoContent";
 
 const App = () => {
-  return (
-    <div className="bg-black  text-white h-screen font-poppins ">
-      <Header />
-
-      <div className="flex pt-8 overflow-x-auto h-full">
-        <div className="flex min-w-max">
-          <Sidebar />
-          <TodoContent />
+    return (
+      <div className="bg-black text-white h-screen font-poppins flex flex-col">
+        <Header />
+        <div className="flex flex-1 pt-8 overflow-hidden">
+          <Sidebar className="w-64 flex-shrink-0" /> 
+          <TodoContent className="flex-1 overflow-auto" /> 
         </div>
       </div>
-    </div>
-  );
+    );
 };
 
 export default App;
